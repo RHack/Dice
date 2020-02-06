@@ -1,0 +1,11 @@
+C:\Users\rhackemack\source\repos\Dice\Dice\bin\Debug\netcoreapp3.1\Dice.exe
+C:\Users\rhackemack\source\repos\Dice\Dice\bin\Debug\netcoreapp3.1\Dice.deps.json
+C:\Users\rhackemack\source\repos\Dice\Dice\bin\Debug\netcoreapp3.1\Dice.runtimeconfig.json
+C:\Users\rhackemack\source\repos\Dice\Dice\bin\Debug\netcoreapp3.1\Dice.runtimeconfig.dev.json
+C:\Users\rhackemack\source\repos\Dice\Dice\bin\Debug\netcoreapp3.1\Dice.dll
+C:\Users\rhackemack\source\repos\Dice\Dice\bin\Debug\netcoreapp3.1\Dice.pdb
+C:\Users\rhackemack\source\repos\Dice\Dice\obj\Debug\netcoreapp3.1\Dice.csprojAssemblyReference.cache
+C:\Users\rhackemack\source\repos\Dice\Dice\obj\Debug\netcoreapp3.1\Dice.AssemblyInfoInputs.cache
+C:\Users\rhackemack\source\repos\Dice\Dice\obj\Debug\netcoreapp3.1\Dice.AssemblyInfo.cs
+C:\Users\rhackemack\source\repos\Dice\Dice\obj\Debug\netcoreapp3.1\Dice.dll
+C:\Users\rhackemack\source\repos\Dice\Dice\obj\Debug\netcoreapp3.1\Dice.pdb
