@@ -3,17 +3,16 @@ using System.Text.RegularExpressions;
 
 namespace Dice
 {
-    
     class Program
     {
         // Main function that handles state based on user input.
         static void Main(string[] args)
         {
             Console.WriteLine("Press ENTER without a roll to quit.\n");
-            int[] processedInput = new int[3];
-            string results = "Please enter a valid dice roll.";
-            int processedInputLength = 0;
-            string input = "";
+            int[] processedInput;
+            string results;
+            int processedInputLength;
+            string input;
 
             while (true)
             {
@@ -30,11 +29,10 @@ namespace Dice
 
                 if(processedInputLength < 2 || processedInputLength > 3)
                 {
-                    results = "Please enter a valid dice roll.";
+                    results = "Please enter a valid dice roll.\n";
                 }
                 else
                 {
-
                     results = CalculateResults(processedInput);
                 }
 
@@ -48,12 +46,12 @@ namespace Dice
         public static int[] ProcessInput(String input)
         {
             input = Regex.Replace(input, "[^0-9d+-]", string.Empty);
-            Console.WriteLine(input);
             string[] roll = input.Split('d', '+', '-');
 
             int rollLength = roll.Length;
             int modifierPosition = rollLength - 1;
             int[] rollNumbers = new int[rollLength];
+
             if (rollLength > 1 && rollLength < 4)
             {
                 if (input.Contains('-'))
@@ -72,8 +70,7 @@ namespace Dice
 
         // Calculates the result of all dice rolls and appends them to a string.
         // Accepts individual roll results as an array of integers.
-        // Returns the text of results and the final total as a tuple containing
-        //  a string and an int.
+        // Returns the text of results and the final total as a string.
         public static String CalculateResults(int[] roll)
         {
             int quantity = roll[0], faces = roll[1];
@@ -96,14 +93,15 @@ namespace Dice
                 printResult += $"{modifierSign} {Math.Abs(modifier)} ";
             }
 
-            printResult += $"resulted in {rollTotal}\nIndividual Rolls: {individualRolls}";
+            printResult += $"resulted in {rollTotal}\nIndividual Rolls: {individualRolls}\n";
 
             return printResult;
         }
 
         // Function responsible for rolling all the dice.
         // Accepts the number of dice and their face count.
-        // Returns the individual result of each die as an array of integers.
+        // Returns the individual result of each die as tuple with a string
+        //  of roll results and the total as an integer.
         public static Tuple<string, int> Roll(int quantity, int faces)
         {
             Random diceSeed = new Random();
