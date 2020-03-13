@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace Dice
 {
-    class Program
+    public class Program
     {
         // Main function that handles state based on user input.
         static void Main(string[] args)
@@ -94,7 +94,7 @@ namespace Dice
             }
 
             printResult += $"resulted in {rollTotal}\nIndividual Rolls: {individualRolls}\n";
-
+            
             return printResult;
         }
 
